@@ -14,6 +14,14 @@ h1, h2, h3{
     flex-flow:row wrap;
 }
 
+#container {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .letter{
     color: #C1D72F;
     background-color: white;

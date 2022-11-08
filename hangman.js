@@ -57,11 +57,13 @@ window.onload = () => {
 
       // Si la letra no está en la palabra, resta una vida
 
-      if (!letraEncontrada) {
+      if (!letraEncontrada && !e.target.classList.contains("letraFallada")) {
         totalVidas--;
         document.getElementById("vidas").innerHTML = totalVidas;
+        e.target.classList.add("letraFallada");
         e.target.style.opacity = "0%";
         e.target.style.cursor = "default";
+        console.log(e.target.style.opacity);
       } else{
         e.target.style.backgroundColor = "green";
         e.target.style.cursor = "default";
@@ -76,8 +78,8 @@ window.onload = () => {
         mensajeVidas.style.borderRadius = "5px";
         mensajeVidas.style.color = "white";
         mensajeVidas.style.fontWeight = "bold";
-        mensajeVidas.style.marginLeft = "450px";
-        mensajeVidas.style.marginRight = "450px";
+        mensajeVidas.style.marginLeft = "350px";
+        mensajeVidas.style.marginRight = "350px";
       }
 
       if(contadorAciertos == palabra.length){
@@ -88,8 +90,8 @@ window.onload = () => {
         mensajeVidas.style.borderRadius = "5px";
         mensajeVidas.style.color = "white";
         mensajeVidas.style.fontWeight = "bold";
-        mensajeVidas.style.marginLeft = "450px";
-        mensajeVidas.style.marginRight = "450px";
+        mensajeVidas.style.marginLeft = "350px";
+        mensajeVidas.style.marginRight = "350px";
       }
     }
     });
