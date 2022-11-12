@@ -96,4 +96,9 @@ window.onload = () => {
     }
     });
   }
+
+  restart = document.getElementById("restart");
+  restart.addEventListener("click", () => {
+    location.reload();
+  });
 };
